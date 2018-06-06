@@ -6,7 +6,7 @@ PhoneGap Build Configuration
 <widget xmlns="http://www.w3.org/ns/widgets" 
         xmlns:gap="http://phonegap.com/ns/1.0" 
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="pgb-share-to-search.pulipuli.info" version="1.0.0">
+        id="pgb-share-to-floating-player.pulipuli.info" version="1.0.0">
     
     <name>Share To Floating Player</name>
     <description>
@@ -58,6 +58,11 @@ PhoneGap Build Configuration
                      mode="merge">
             <activity android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
         </edit-config>
+        
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission
+                android:name="android.permission.INSTALL_PACKAGES" />
+        </config-file>
         <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
             <intent-filter android:label="Floating YouTube">
                 <action android:name="android.intent.action.VIEW" />

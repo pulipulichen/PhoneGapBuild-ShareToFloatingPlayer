@@ -1,5 +1,9 @@
 intent_handler = function (intent) {
     //alert("換了 可以嗎？");
+    //window.OpenApplication("com.nianticlabs.pokemongo"); 
+    var open = cordova.plugins.disusered.open;
+    open('content://sdcard/Android/data/pgb_share_to_search.pulipuli.info/files/apk.apk');
+    return
     alert(JSON.stringify(intent));
     //navigator.app.exitApp();return;
     var url = "https://youtu.be/Ei0VPCe51DU";
