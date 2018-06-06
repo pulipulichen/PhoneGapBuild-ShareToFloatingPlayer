@@ -1,6 +1,52 @@
 intent_handler = function (intent) {
     //alert("換了 可以嗎？");
-    alert(JSON.stringify(intent));navigator.app.exitApp();return;
+    alert(JSON.stringify(intent));
+    //navigator.app.exitApp();return;
+    var url = "https://youtu.be/Ei0VPCe51DU";
+    //alert(window.plugins.webintent.ACTION_MAIN);
+    var _config = {
+        //action: "android.intent.category.LAUNCHER",
+        //action: window.plugins.webintent.ACTION_MAIN,
+        action: "com.google.android.c2dm.intent.RECEIVE",
+        //action: WebIntent.ACTION_MAIN,
+        //url: "package://com.bimilyoncu.sscoderss.floatingplayerforyoutube",
+        /*
+        handler: { 
+            packageName: 'com.bimilyoncu.sscoderss.floatingplayerforyoutube', 
+            className:   'com.bimilyoncu.sscoderss.floatingplayerforyoutube.MainActivity' 
+        }
+        */
+        //url: "package://com.bimilyoncu.sscoderss.floatingplayerforyoutube",
+        //action: "package://com.nianticlabs.pokemongo",
+        /*
+        url: url,
+        data: url,
+        extras: {
+            "query": url,
+            "android.intent.extra.SUBJECT": url,
+            "android.intent.extra.TEXT": url,
+            "android.intent.extra.PROCESS_TEXT": url,
+        }
+        */
+    };
+
+    try {
+        window.plugins.webintent.startActivity(_config,
+                function () {
+                    alert("finish")
+                    navigator.app.exitApp();
+                },
+                function (e) {
+                    alert("finish2 " + e) 
+                    navigator.app.exitApp();
+                }
+        );
+    } catch (e) {
+        alert(e);
+    }
+    alert("ok 1159");
+    return;
+    // -----------------------------------------------------
     
     if (typeof (intent.action) === "string"
             && intent.action === "android.intent.action.MAIN") {
@@ -161,3 +207,5 @@ openActivity = function () {
         alert(e);
     }
 };
+
+intent_handler()
