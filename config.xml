@@ -47,12 +47,12 @@ PhoneGap Build Configuration
         <edit-config file="AndroidManifest.xml"
                      target="/manifest/application"
                      mode="merge">
-            <application android:theme="@android:style/Theme.Translucent"></application>
+            <application android:theme="@android:style/Theme.Translucent.NoTitleBar"></application>
         </edit-config>
         <edit-config file="AndroidManifest.xml"
                      target="/manifest/application/activity"
                      mode="merge">
-            <activity android:theme="@android:style/Theme.Translucent"></activity>
+            <activity android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
         </edit-config>
         <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
             <intent-filter android:label="Floating YouTube">
@@ -60,7 +60,8 @@ PhoneGap Build Configuration
                 <action android:name="android.intent.action.SEND" />
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:host="youtu.be" android:scheme="https"/>
+                <!-- <data android:host="youtu.be" android:scheme="https"/> -->
+                <data android:mimeType="text/plain"/>
             </intent-filter>
         </config-file>
     </platform>
