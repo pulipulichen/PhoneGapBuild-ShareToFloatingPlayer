@@ -57,12 +57,12 @@ PhoneGap Build Configuration
         <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
             <intent-filter android:label="Floating YouTube">
                 <!-- <action android:name="android.intent.action.VIEW" /> -->
-                <!--<action android:name="android.intent.action.SEND" />-->
-                <action android:name="com.google.android.youtube" />
+                <action android:name="android.intent.action.SEND" />
+                <!-- <action android:name="com.google.android.youtube" /> -->
                 <!-- <category android:name="android.intent.category.DEFAULT"/> -->
                 <!-- <category android:name="android.intent.category.BROWSABLE" /> -->
                 <!-- <data android:host="youtu.be" android:scheme="https"/> -->
-                <data android:mimeType="text/plain"/>
+                <data android:mimeType="text/plain" android:pathPattern="在 YouTube 上觀看.*"/>
             </intent-filter>
         </config-file>
     </platform>
