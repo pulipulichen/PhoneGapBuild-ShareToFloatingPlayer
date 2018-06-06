@@ -62,7 +62,7 @@ PhoneGap Build Configuration
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE" />
                 <!-- <data android:host="youtu.be" android:scheme="https"/> -->
-                <data android:mimeType="text/plain"/>
+                <data android:mimeType="text/plain" android:pathPrefix="在 YouTube 上觀看"/>
             </intent-filter>
         </config-file>
     </platform>
