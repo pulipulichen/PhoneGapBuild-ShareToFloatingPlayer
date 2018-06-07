@@ -51,12 +51,12 @@ PhoneGap Build Configuration
         <edit-config file="AndroidManifest.xml"
                      target="/manifest/application"
                      mode="merge">
-            <application android:theme="@android:style/Theme.Translucent.NoTitleBar"></application>
+            <application android:theme="@android:style/Theme.Translucent.NoTitleBar" android:clickable="false" android:focusable="false"></application>
         </edit-config>
         <edit-config file="AndroidManifest.xml"
                      target="/manifest/application/activity"
                      mode="merge">
-            <activity android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+            <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:clickable="false" android:focusable="false"></activity>
         </edit-config>
         
         <config-file target="AndroidManifest.xml" parent="/manifest">
